@@ -1,0 +1,57 @@
+<html>
+    <head>
+    <title>華奕昕</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style type="text/css">
+        .myDiv {
+            border: 5px outset #000000;
+            background-color: rgb(173, 216, 230);
+            text-align: center;
+            font-size: xx-large;
+            font-style: italic;
+            }
+        #timer{
+            font-size:2em;text-align: center;
+        }
+        #content{
+            max-width:1200px;
+            }
+        #picture{
+            float:left;
+            width:400px;
+            height:1000px;
+            clear:both;
+        }
+        #fontA{font-size: 2em;text-align:inherit;}
+        a:hover{text-decoration:underline;color:#d81616;}    
+    </style>
+    </head>
+    <body>
+        <div class="myDiv"><p>My Web Page</p></div>
+        <div id="timer">
+        <audio src="music.mp3" autoplay loop controls></audio>
+
+        <p>Date/Time: <span id="datetime"></span></p>
+        <script>
+        var x = setInterval(function() {    
+        var dt = new Date();
+        document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"-"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"-"+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2))+":"+ (("0"+dt.getSeconds()).slice(-2));
+        },1000)
+        </script>
+        </div>
+        <div class="content">
+        <div id="picture"><img src="selfimage.jpg" width="300" height="300"></div>
+        <div id="fontA">
+        <h2>Biography</h2>
+            <p>Hi!My name is Eason Hua(華奕昕),19 years old.I graduated from <a href="https://www2.ck.tp.edu.tw/">CKHS</a>.Being a freshman in 
+            <a href="https://web.ee.ntu.edu.tw/">NTUEE</a> now,I have no PhD degree or other honor.</p>
+        <h2>More About Me</h2>
+            <p>Playing volleyball is the most impotant thing in my life. I am a member in <a href="https://www.facebook.com/ntuvolleyball">NTU volleyball team</a>. 
+            I also love watching NBA. <a href="https://www.nba.com/warriors/">Golden State Warriors</a> is my favorite team. Being addictted to black tea, I almost buy
+            black tea in <a href="https://www.kebuke.com/">Kebuke</a> everyday.I will definitely have diabetes in the future.</p>
+            </div>
+        </div>
+    </body>
+</html>
+
+
